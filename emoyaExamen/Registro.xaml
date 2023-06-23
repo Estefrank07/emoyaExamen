@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="emoyaExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbUsuario" HorizontalOptions="End" TextColor="Red" FontSize="20"></Label>
+            <Label Text="REGISTRO" HorizontalOptions="Center" FontSize="30"></Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text="Fecha" FontSize="20" Grid.Row="0" Grid.Column="0"></Label>
+                <DatePicker x:Name="dpFecha"  Date=" 06/06/2022" Format="M/d/yyy" Grid.Row="0" Grid.Column="1"></DatePicker>
+                <Label Text="Pais" FontSize="20" Grid.Row="1" Grid.Column="0"></Label>
+                <Picker Title="Pais" x:Name="pkPaises" Grid.Row="1" Grid.Column="1" >
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>España</x:String>
+                        <x:String>Peru</x:String>
+                        <x:String>Italia</x:String>
+                    </Picker.Items>
+                </Picker>
+                
+                <Label Text="Ciudades" FontSize="20" Grid.Row="2" Grid.Column="0"></Label>
+                <Picker Title="Ciudades" x:Name="pkCiudades" Grid.Row="2" Grid.Column="1" >
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Madrid</x:String>
+                        <x:String>Lima</x:String>
+                        <x:String>Roma</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Monto Inicial" FontSize="20" Grid.Row="3" Grid.Column="0"></Label>
+                <Entry x:Name="txtInicial" Placeholder="Monto Inicial" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" TextChanged ="txtInicial_TextChanged"></Entry>
+
+                <Label Text="Pago Mensual" FontSize="20" Grid.Row="4" Grid.Column="0"></Label>
+                <Entry x:Name="txtMensual" Placeholder="Pago Mensual" Keyboard="Numeric" Grid.Row="4" Grid.Column="1" TextChanged ="txtMensual_TextChanged"></Entry>
+
+                
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+               
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Nombre" FontSize="20" Grid.Row="0" Grid.Column="0"></Label>
+                <Entry x:Name="txtNombre" Placeholder="Nombre" Grid.Row="1" Grid.Column="0"></Entry>
+
+                <Label Text="Apellido" FontSize="20" Grid.Row="0" Grid.Column="1"></Label>
+                <Entry x:Name="txtApellido" Placeholder="Apellido" Grid.Row="1" Grid.Column="1"></Entry>
+
+                <Label Text="Edad" FontSize="20" Grid.Row="0" Grid.Column="2"></Label>
+                <Entry x:Name="txtEdad" Placeholder="Edad" Keyboard="Numeric" Grid.Row="1" Grid.Column="2"></Entry>
+                <Button x:Name="bntPago" Text="Pago Mensual" Clicked="bntPago_Clicked_1" HorizontalOptions="Center"  Grid.Row="2" Grid.Column="0"></Button>
+                <Button x:Name="bntResumen" Text="Resumen" Clicked="bntResumen_Clicked" HorizontalOptions="Center" Grid.Row="2" Grid.Column="2"></Button>
+            </Grid>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
